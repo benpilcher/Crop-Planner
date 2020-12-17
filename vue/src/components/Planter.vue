@@ -24,9 +24,10 @@
                         <option value="turnips">Turnips</option>
                         <option value="dirt">Dirt</option>
                     </select>
-                    <button class="btn btn-submit" v-on:click="submitNewCropToDatabase">Plant Crop!</button>
-                    <button class="btn btn-reclaim" v-show="!inactivePlot" v-bind="inactivePlot" v-on:click='inactivatePlot' >Reclaim Plot</button>
-                    <button class="btn btn-abandon" v-show="inactivePlot" v-bind="inactivePlot" v-on:click='inactivatePlot' >Abandon Plot</button>
+                    <button class="submit" v-on:click="submitNewCropToDatabase">Plant Crop!</button>
+                    <div id="spacer"></div>
+                    <button class="reclaim" v-show="!inactivePlot" v-bind="inactivePlot" v-on:click='inactivatePlot' > Reclaim Plot</button>
+                    <button class="abandon" v-show="inactivePlot" v-bind="inactivePlot" v-on:click='inactivatePlot' > Abandon Plot</button>
             </form>
         </div>
 
@@ -140,25 +141,72 @@ export default {
 
 <style>
 
-.btn-reclaim:hover{
+.reclaim:hover{
     background-color: #83a126;
+    color: white;
 }
-.btn-abandon:hover{
-    background-color: red;
+.reclaim{
+    color:#83a126;
+    background-color: white;
+    border-radius: 3px;
+    font-weight: bold;
 }
-.btn-submit:hover{
+.abandon{
+    color:#fe6f15;
+    background-color: white;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.abandon:hover{
+    background-color: #fe6f15;
+    color: white;
+}
+.submit{
+    color: #83a126;
+    background-color: white;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+.submit:hover{
     background-color: #83a126;
+    color: white;
 }
 .btn-reclaim{
     display:flex;
 
 }
-
-
-#planter{
+option{
+    color: #83a126;
+}
+option:hover{
+    color: white;
+    background-color: #83a126;
+}
+#vegitables{
+    display: inline-block;
+    color: #395057;
+    vertical-align: middle;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+ 
+}
+.cardForm{
+    background-color: white;
     display: flex;
+    margin: 0 10px 10px 10px;
+    border-radius: 3px;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 3px;
+    max-height: 40px;
+}
+#spacer{
+    flex-grow: 1;
+}
+#planter{
     flex-direction: row;
-    justify-content: space-around;
 }
 
 </style>
