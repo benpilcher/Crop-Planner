@@ -4,7 +4,7 @@
         <div v-bind="cropSquare"  >
             <form class="cardForm" >
                     <select id="vegetables" name="vegetable" v-model="vName">
-                        <option value="">Select a vegetable</option>
+                        <option id="option" value="">Select a vegetable</option>
                         <option value="beets">Beets</option>
                         <option value="broccoli">Broccoli</option>
                         <option value="brussels-sprouts">Brussels-Sprouts</option>
@@ -151,6 +151,9 @@ export default {
     border-radius: 3px;
     font-weight: bold;
 }
+.reclaim:focus{
+  outline:none;
+}
 .abandon{
     color:#fe6f15;
     background-color: white;
@@ -160,6 +163,9 @@ export default {
 .abandon:hover{
     background-color: #fe6f15;
     color: white;
+}
+.abandon:focus{
+  outline:none;
 }
 .submit{
     color: #83a126;
@@ -172,25 +178,37 @@ export default {
     background-color: #83a126;
     color: white;
 }
+.submit:focus{
+  outline: none;
+}
 .btn-reclaim{
     display:flex;
-
 }
-option{
-    color: #83a126;
+.btn-reclaim:hover{
+    display:flex;
+    outline:none;
+}
+option {
+    color: #83a126 !important;
 }
 option:hover{
     color: white;
     background-color: #83a126;
 }
-#vegitables{
+
+#vegetables{
     display: inline-block;
-    color: #395057;
+    background-color: #83a126;
+    color:white;
     vertical-align: middle;
-    border: 1px solid #ced4da;
+    border: 1px solid #83a126;
     border-radius: 3px;
- 
+    font-weight: bold;
 }
+#vegetables:focus{
+  outline-color:#83a126;
+}
+
 .cardForm{
     background-color: white;
     display: flex;
