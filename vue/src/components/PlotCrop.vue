@@ -81,6 +81,7 @@ export default {
   border-radius: 3px;
   margin-bottom: 0px !important;
   align-items: center;
+  height: 40px;
 }
 #icon{
   grid-area: icon;
