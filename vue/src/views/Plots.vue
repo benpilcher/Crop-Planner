@@ -29,7 +29,7 @@
         <shopping-list></shopping-list>
       </div>
     </div>
-      <button id="back-button" @click="$router.go(-1)">
+      <button id="back-button" @click="$router.push({name: 'home'})">
       <i class="fas fa-seedling"></i>
       Go Back
       <i class="fas fa-seedling"></i>
