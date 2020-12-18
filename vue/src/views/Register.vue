@@ -7,9 +7,9 @@
             <i class="fas fa-seedling"></i>
             <br>Create your new account below.</h1>
       <div id="ohno" class="alert alert-danger" role="alert" v-if="registrationErrors">
-        <img id="mrYuck" src ="../assets/error.jpeg" >
+        <img id="mrYuck" src ="../assets/failureCarrot.png" >
         {{ registrationErrorMsg }}
-        <img id="mrYucks" src ="../assets/error.jpeg" >
+        <img id="mrYucks" src ="../assets/failureCarrot.png" >
       </div>
       <label for="username" class="sr-only">Username</label>
       <input
@@ -139,11 +139,12 @@ button:focus{
   outline: none;
 }
 #ohno{
-  padding:20px;
-  margin: 20px;
+  padding:0px;
+  margin: 0px;
   margin-bottom: 20px;
-  background-color: white;
-  color:#4e2409;
+  background-color: rgb(228, 86, 86);
+  color:white;
+  border: none;
 
 }
 #mrYuck{
